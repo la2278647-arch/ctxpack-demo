@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Item",
+  "description": "A single inventory item as returned by the hello-service API.",
+  "type": "object",
+  "required": ["sku", "name", "price_cents"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "sku": { "type": "string", "pattern": "^[A-Z0-9-]+$", "minLength": 1, "maxLength": 64 },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "price_cents": { "type": "integer", "minimum": 0 },
+    "quantity": { "type": "integer", "minimum": 0 },
+    "updated_at": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": false
+}

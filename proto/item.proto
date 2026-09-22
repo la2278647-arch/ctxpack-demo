@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package helloservice.v1;
+
+option go_package = "hello-service/proto/helloservice/v1;v1";
+
+// Item is the wire form of an inventory item. The JSON API and the gRPC
+// service share this shape so clients do not need two models.
+message Item {
+  int32 id = 1;
+  string sku = 2;
+  string name = 3;
+  int32 price_cents = 4;
+  int32 quantity = 5;
+}
+
+// ListItemsRequest pages through items. cursor is the id of the last item
+// returned by the previous page.
+message ListItemsRequest {
+  int32 limit = 1;
+  string cursor = 2;
+}
+
+message ListItemsResponse {
+  repeated Item items = 1;
+  string next_cursor = 2;
+}
+
+message GetItemRequest {
+  int32 id = 1;
+}
+
+service ItemService {
+  rpc ListItems(ListItemsRequest) returns (ListItemsResponse);
+  rpc GetItem(GetItemRequest) returns (Item);
+}

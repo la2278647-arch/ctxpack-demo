@@ -1,0 +1,96 @@
+openapi: 3.1.0
+info:
+  title: hello-service
+  version: 0.3.1
+  description: A tiny JSON API for inventory items.
+servers:
+  - url: http://localhost:8000
+paths:
+  /items:
+    get:
+      summary: List items
+      parameters:
+        - name: limit
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 200, default: 50 }
+        - name: cursor
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: One page of items
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Page' }
+        '422': { description: Invalid query parameter }
+    post:
+      summary: Create an item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ItemIn' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ItemOut' }
+        '409': { description: sku already exists }
+        '422': { description: Validation failed }
+  /items/{item_id}:
+    parameters:
+      - name: item_id
+        in: path
+        required: true
+        schema: { type: integer, minimum: 1 }
+    get:
+      summary: Fetch one item
+      responses:
+        '200': { description: Found }
+        '404': { description: Not found }
+    patch:
+      summary: Partial update
+      responses:
+        '200': { description: Updated }
+        '404': { description: Not found }
+    delete:
+      summary: Delete an item, idempotently
+      responses:
+        '204': { description: Deleted }
+  /healthz:
+    get:
+      summary: Liveness probe
+      responses:
+        '200': { description: OK }
+  /readyz:
+    get:
+      summary: Readiness probe
+      responses:
+        '200': { description: Ready }
+        '503': { description: Not ready }
+components:
+  schemas:
+    ItemIn:
+      type: object
+      required: [sku, name, price_cents]
+      properties:
+        sku: { type: string, pattern: '^[A-Z0-9-]+$', minLength: 1, maxLength: 64 }
+        name: { type: string, minLength: 1, maxLength: 200 }
+        price_cents: { type: integer, minimum: 0 }
+        quantity: { type: integer, minimum: 0, default: 0 }
+    ItemOut:
+      allOf:
+        - $ref: '#/components/schemas/ItemIn'
+        - type: object
+          properties:
+            id: { type: integer, minimum: 1 }
+            updated_at: { type: [string, 'null'], format: date-time }
+    Page:
+      type: object
+      required: [items, next_cursor]
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/ItemOut' }
+        next_cursor: { type: [string, 'null'] }
