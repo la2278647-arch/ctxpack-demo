@@ -181,9 +181,11 @@ ctxpack mcp
 ```
 
 It advertises `pack_repo`, `repo_map`, `count_tokens`, `list_models`, and
-`diff_repo` on protocol `2024-11-05`. `count_tokens` supports `format: "json"`
-for machine-readable output, and `pack_repo`/`diff_repo` accept a `model`
-argument to annotate fit for a named model. For Cursor or Claude Desktop:
+`diff_repo` on protocol `2024-11-05`. Since v0.1.6 every tool supports
+`format: "json"` for machine-readable output, and `pack_repo`/`diff_repo`
+accept a `model` argument to annotate fit for a named model. `diff_repo` also
+accepts a `list` parameter to return changed file paths only. For Cursor or
+Claude Desktop:
 
 ```json
 {
