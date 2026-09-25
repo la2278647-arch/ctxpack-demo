@@ -159,8 +159,9 @@ much it cost, instead of silently truncating mid-file. See
 
 `ctxpack diff <path>` packs only what `git status` reports as changed and
 omits everything else, so you can ask a model about a working tree without
-sending the whole repository. It is covered in the main repository's test
-suite.
+sending the whole repository. Supports `--ref` to compare against a git ref,
+`--dry-run` to preview, `--model` for fit annotation, and all the standard
+`--include`/`--exclude`/`--format`/`--output` flags.
 
 ## Running the service
 
@@ -179,8 +180,10 @@ ctxpack also runs as a Model Context Protocol server over stdio:
 ctxpack mcp
 ```
 
-It advertises `pack_repo`, `repo_map`, `count_tokens`, and `list_models` on
-protocol `2024-11-05`. For Cursor or Claude Desktop:
+It advertises `pack_repo`, `repo_map`, `count_tokens`, `list_models`, and
+`diff_repo` on protocol `2024-11-05`. `count_tokens` supports `format: "json"`
+for machine-readable output, and `pack_repo`/`diff_repo` accept a `model`
+argument to annotate fit for a named model. For Cursor or Claude Desktop:
 
 ```json
 {
