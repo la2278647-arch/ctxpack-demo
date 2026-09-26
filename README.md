@@ -37,48 +37,55 @@ which is exactly the situation a context budget has to handle.
 
 ## ctxpack on this repo
 
-Output captured from this project with ctxpack v0.1.10.
+Output captured from this project with ctxpack v0.1.10, and reproduced
+here from a fresh clone of this commit.
+
+Line endings matter: the numbers below hold for an LF checkout -
+macOS, Linux, or Windows with `core.autocrlf=false`. On a Windows CRLF
+checkout every line gains a byte, which the counter counts, so the tree
+reads larger and the 5000-token budget keeps one fewer file. This was
+checked by cloning the commit both ways and comparing.
 
 ### tokens
 
 ```console
 $ ctxpack tokens .
 Path:       ctxpack-demo
-Tokens:     ~42028
-Bytes:      93.1 KB
+Tokens:     ~42187
+Bytes:      93.4 KB
 
 Per-model fit (est. tokens / context window):
-  [fits] claude-3-haiku         42.0k / 195.9k (21%)
-  [fits] claude-3-opus          42.0k / 195.9k (21%)
-  [fits] claude-3-sonnet        42.0k / 195.9k (21%)
-  [fits] claude-3.5-haiku       42.0k / 195.9k (21%)
-  [fits] claude-3.5-sonnet      42.0k / 195.9k (21%)
-  [fits] claude-3.7-sonnet      42.0k / 195.9k (21%)
-  [fits] claude-4-opus          42.0k / 195.9k (21%)
-  [fits] claude-4-sonnet        42.0k / 195.9k (21%)
-  [fits] deepseek-r1            42.0k / 123.9k (34%)
-  [fits] deepseek-v3            42.0k / 123.9k (34%)
-  [fits] gemini-1.5-flash       42.0k / 995.9k (4%)
-  [fits] gemini-1.5-pro         42.0k / 2.0M (2%)
-  [fits] gemini-2.0-flash       42.0k / 1.0M (4%)
-  [fits] gemini-2.5-flash       42.0k / 995.9k (4%)
-  [fits] gemini-2.5-pro         42.0k / 2.0M (2%)
-  [OVERFLOW] gpt-3.5-turbo          42.0k / 12.3k (342%)
-  [OVERFLOW] gpt-4                  42.0k / 4.1k (1026%)
-  [fits] gpt-4-turbo            42.0k / 123.9k (34%)
-  [fits] gpt-4.1                42.0k / 123.9k (34%)
-  [fits] gpt-4o                 42.0k / 123.9k (34%)
-  [fits] gpt-4o-mini            42.0k / 123.9k (34%)
-  [fits] gpt-5                  42.0k / 195.9k (21%)
-  [fits] llama-3.1-405b         42.0k / 123.9k (34%)
-  [fits] llama-3.3-70b          42.0k / 123.9k (34%)
-  [fits] mistral-large          42.0k / 123.9k (34%)
-  [fits] mistral-large-2        42.0k / 123.9k (34%)
-  [fits] o1                     42.0k / 195.9k (21%)
-  [fits] o3                     42.0k / 195.9k (21%)
-  [fits] o4-mini                42.0k / 195.9k (21%)
-  [fits] qwen-2.5-72b           42.0k / 123.9k (34%)
-  [fits] qwen2.5                42.0k / 123.9k (34%)
+  [fits] claude-3-haiku         42.2k / 195.9k (22%)
+  [fits] claude-3-opus          42.2k / 195.9k (22%)
+  [fits] claude-3-sonnet        42.2k / 195.9k (22%)
+  [fits] claude-3.5-haiku       42.2k / 195.9k (22%)
+  [fits] claude-3.5-sonnet      42.2k / 195.9k (22%)
+  [fits] claude-3.7-sonnet      42.2k / 195.9k (22%)
+  [fits] claude-4-opus          42.2k / 195.9k (22%)
+  [fits] claude-4-sonnet        42.2k / 195.9k (22%)
+  [fits] deepseek-r1            42.2k / 123.9k (34%)
+  [fits] deepseek-v3            42.2k / 123.9k (34%)
+  [fits] gemini-1.5-flash       42.2k / 995.9k (4%)
+  [fits] gemini-1.5-pro         42.2k / 2.0M (2%)
+  [fits] gemini-2.0-flash       42.2k / 1.0M (4%)
+  [fits] gemini-2.5-flash       42.2k / 995.9k (4%)
+  [fits] gemini-2.5-pro         42.2k / 2.0M (2%)
+  [OVERFLOW] gpt-3.5-turbo          42.2k / 12.3k (343%)
+  [OVERFLOW] gpt-4                  42.2k / 4.1k (1030%)
+  [fits] gpt-4-turbo            42.2k / 123.9k (34%)
+  [fits] gpt-4.1                42.2k / 123.9k (34%)
+  [fits] gpt-4o                 42.2k / 123.9k (34%)
+  [fits] gpt-4o-mini            42.2k / 123.9k (34%)
+  [fits] gpt-5                  42.2k / 195.9k (22%)
+  [fits] llama-3.1-405b         42.2k / 123.9k (34%)
+  [fits] llama-3.3-70b          42.2k / 123.9k (34%)
+  [fits] mistral-large          42.2k / 123.9k (34%)
+  [fits] mistral-large-2        42.2k / 123.9k (34%)
+  [fits] o1                     42.2k / 195.9k (22%)
+  [fits] o3                     42.2k / 195.9k (22%)
+  [fits] o4-mini                42.2k / 195.9k (22%)
+  [fits] qwen-2.5-72b           42.2k / 123.9k (34%)
+  [fits] qwen2.5                42.2k / 123.9k (34%)
 ```
 
 Two small-window models overflow. Token counts are estimates, not real BPE
@@ -89,9 +96,9 @@ output.
 ```console
 $ ctxpack map .
 Repository: ctxpack-demo
-Files: ~42028 tokens, 93.1 KB
+Files: ~42187 tokens, 93.4 KB
 
-ctxpack-demo/  [42028t, 93.1KB]
+ctxpack-demo/  [42187t, 93.4KB]
   data/  [26178t, 56.9KB]
     seed.json  [26178t, 56.9KB]
   docs/  [1537t, 3.6KB]
@@ -122,12 +129,12 @@ ctxpack-demo/  [42028t, 93.1KB]
   Dockerfile  [124t, 281B]
   LICENSE  [314t, 812B]
   Makefile  [121t, 286B]
-  README.md  [5497t, 12.0KB]
+  README.md  [5656t, 12.3KB]
   openapi.yaml  [1110t, 2.7KB]
   requirements.txt  [56t, 104B]
 ```
 
-The data file alone is 62.3% of the tokens. `data/` would be the first thing to
+The data file alone is 62.1% of the tokens. `data/` would be the first thing to
 cut.
 
 ### pack with a budget
