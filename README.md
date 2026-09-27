@@ -51,40 +51,40 @@ checked by cloning the commit both ways and comparing.
 ```console
 $ ctxpack tokens .
 Path:       ctxpack-demo
-Tokens:     ~42469
-Bytes:      94.1 KB
+Tokens:     ~47407
+Bytes:      105.8 KB
 
 Per-model fit (est. tokens / context window):
-  [fits] claude-3-haiku         42.5k / 195.9k (22%)
-  [fits] claude-3-opus          42.5k / 195.9k (22%)
-  [fits] claude-3-sonnet        42.5k / 195.9k (22%)
-  [fits] claude-3.5-haiku       42.5k / 195.9k (22%)
-  [fits] claude-3.5-sonnet      42.5k / 195.9k (22%)
-  [fits] claude-3.7-sonnet      42.5k / 195.9k (22%)
-  [fits] claude-4-opus          42.5k / 195.9k (22%)
-  [fits] claude-4-sonnet        42.5k / 195.9k (22%)
-  [fits] deepseek-r1            42.5k / 123.9k (34%)
-  [fits] deepseek-v3            42.5k / 123.9k (34%)
-  [fits] gemini-1.5-flash       42.5k / 995.9k (4%)
-  [fits] gemini-1.5-pro         42.5k / 2.0M (2%)
-  [fits] gemini-2.0-flash       42.5k / 1.0M (4%)
-  [fits] gemini-2.5-flash       42.5k / 995.9k (4%)
-  [fits] gemini-2.5-pro         42.5k / 2.0M (2%)
-  [OVERFLOW] gpt-3.5-turbo          42.5k / 12.3k (346%)
-  [OVERFLOW] gpt-4                  42.5k / 4.1k (1037%)
-  [fits] gpt-4-turbo            42.5k / 123.9k (34%)
-  [fits] gpt-4.1                42.5k / 123.9k (34%)
-  [fits] gpt-4o                 42.5k / 123.9k (34%)
-  [fits] gpt-4o-mini            42.5k / 123.9k (34%)
-  [fits] gpt-5                  42.5k / 195.9k (22%)
-  [fits] llama-3.1-405b         42.5k / 123.9k (34%)
-  [fits] llama-3.3-70b          42.5k / 123.9k (34%)
-  [fits] mistral-large          42.5k / 123.9k (34%)
-  [fits] mistral-large-2        42.5k / 123.9k (34%)
-  [fits] o1                     42.5k / 195.9k (22%)
-  [fits] o3                     42.5k / 195.9k (22%)
-  [fits] o4-mini                42.5k / 195.9k (22%)
-  [fits] qwen-2.5-72b           42.5k / 123.9k (34%)
+  [fits] claude-3-haiku         47.4k / 195.9k (24%)
+  [fits] claude-3-opus          47.4k / 195.9k (24%)
+  [fits] claude-3-sonnet        47.4k / 195.9k (24%)
+  [fits] claude-3.5-haiku       47.4k / 195.9k (24%)
+  [fits] claude-3.5-sonnet      47.4k / 195.9k (24%)
+  [fits] claude-3.7-sonnet      47.4k / 195.9k (24%)
+  [fits] claude-4-opus          47.4k / 195.9k (24%)
+  [fits] claude-4-sonnet        47.4k / 195.9k (24%)
+  [fits] deepseek-r1            47.4k / 123.9k (38%)
+  [fits] deepseek-v3            47.4k / 123.9k (38%)
+  [fits] gemini-1.5-flash       47.4k / 995.9k (5%)
+  [fits] gemini-1.5-pro         47.4k / 2.0M (2%)
+  [fits] gemini-2.0-flash       47.4k / 1.0M (5%)
+  [fits] gemini-2.5-flash       47.4k / 995.9k (5%)
+  [fits] gemini-2.5-pro         47.4k / 2.0M (2%)
+  [OVERFLOW] gpt-3.5-turbo          47.4k / 12.3k (386%)
+  [OVERFLOW] gpt-4                  47.4k / 4.1k (1157%)
+  [fits] gpt-4-turbo            47.4k / 123.9k (38%)
+  [fits] gpt-4.1                47.4k / 123.9k (38%)
+  [fits] gpt-4o                 47.4k / 123.9k (38%)
+  [fits] gpt-4o-mini            47.4k / 123.9k (38%)
+  [fits] gpt-5                  47.4k / 195.9k (24%)
+  [fits] llama-3.1-405b         47.4k / 123.9k (38%)
+  [fits] llama-3.3-70b          47.4k / 123.9k (38%)
+  [fits] mistral-large          47.4k / 123.9k (38%)
+  [fits] mistral-large-2        47.4k / 123.9k (38%)
+  [fits] o1                     47.4k / 195.9k (24%)
+  [fits] o3                     47.4k / 195.9k (24%)
+  [fits] o4-mini                47.4k / 195.9k (24%)
+  [fits] qwen-2.5-72b           47.4k / 123.9k (38%)
 ```
 
 Two small-window models overflow. Token counts are estimates, not real BPE
@@ -95,9 +95,9 @@ output.
 ```console
 $ ctxpack map .
 Repository: ctxpack-demo
-Files: ~42469 tokens, 94.1 KB
+Files: ~47407 tokens, 105.8 KB
 
-ctxpack-demo/  [42469t, 94.1KB]
+ctxpack-demo/  [47407t, 105.8KB]
   data/  [26178t, 56.9KB]
     seed.json  [26178t, 56.9KB]
   docs/  [1537t, 3.6KB]
@@ -128,7 +128,7 @@ ctxpack-demo/  [42469t, 94.1KB]
   Dockerfile  [124t, 281B]
   LICENSE  [314t, 812B]
   Makefile  [121t, 286B]
-  README.md  [5938t, 13.0KB]
+  README.md  [10876t, 24.7KB]
   openapi.yaml  [1110t, 2.7KB]
   requirements.txt  [56t, 104B]
 ```
@@ -620,6 +620,360 @@ tests/test_app.py
 
 ```
 
+`next_cursor` is null when the page is shorter than `limit`.
+
+## POST /items
+
+Create an item. Returns 201.
+
+- `sku` is required, 1-64 characters, uppercase letters, digits and hyphens.
+- `name` is required, 1-200 characters.
+- `price_cents` is required, non-negative integer. Use cents, never floats.
+- `quantity` defaults to 0 and must be non-negative.
+
+A duplicate `sku` returns 409, not 500. Validation failures return 422.
+
+## GET /items/{item_id}
+
+Returns the item, or 404 if the id is unknown.
+
+## PATCH /items/{item_id}
+
+Partial update. Only keys present in the request body are written; absent keys
+are left untouched. 404 for an unknown id.
+
+## DELETE /items/{item_id}
+
+Returns 204. Idempotent: deleting an unknown id also returns 204 so a retry is
+safe.
+
+## GET /healthz
+
+Returns `{"status": "ok"}` with 200. Use for liveness probes only.
+
+## GET /readyz
+
+Returns `{"status": "ready"}` with 200, or `{"status": "not ready"}` with 503
+if the database engine cannot be built.
+
+## Errors
+
+All errors use the shape `{"detail": "..."}`. Status codes:
+
+| Code | Meaning                            |
+| ---- | ---------------------------------- |
+| 400  | A route raised ValueError          |
+| 404  | The item does not exist            |
+| 409  | A different item has the same sku  |
+| 422  | Request body failed validation     |
+| 503  | Readiness probe failed             |
+
+==== docs/ARCHITECTURE.md (690 tokens) ====
+# Architecture
+
+## Shape
+
+Three layers, each with one job:
+
+- `hello_service.routes` owns HTTP: parsing requests, returning responses, and
+  turning database errors into status codes. It never opens a database handle
+  itself; it takes a session as a dependency.
+- `hello_service.models` owns the schema: the `Item` table and its columns.
+  Nothing else imports this module except the routes and the tests.
+- `hello_service.db` owns connections: engine creation, session lifetimes, and
+  commit and rollback behaviour. The engine is built lazily so that importing
+  the package has no filesystem side effects.
+
+Settings live in `hello_service.config`. They are cached because the database
+engine is built once from them, and rebuilding the settings per request would
+rebuild the engine per request.
+
+## Request flow
+
+A request for GET /items/{id} goes through FastAPI routing, which calls
+`get_item` with a session yielded by `get_session`. The route issues one
+`session.get`, serialises the row, and returns it. `get_session` commits on
+success, rolls back on any exception, and always closes the session.
+
+## Why this size
+
+The service is deliberately small. It has one table, five endpoints, and no
+background jobs, so a change to any part is visible in under a minute. The
+points that are usually hard to reason about in a real service - dependency
+injection, session lifetime, lazy engine creation, validation errors - are all
+present and each has a test.
+
+## Not solved here
+
+- Authentication. There is none. Do not put this behind a public load balancer.
+- Migrations. `Base.metadata.create_all` is a test aid; use Alembic for real
+  databases.
+- Rate limiting and caching. Both are deployment concerns.
+
+==== hello_service/__init__.py (37 tokens) ====
+"""hello_service: a tiny JSON API for inventory items."""
+
+__version__ = "0.3.1"
+
+==== hello_service/config.py (338 tokens) ====
+"""Application settings, loaded from environment variables.
+
+Values come from the process environment first, then a local .env file. The
+.env file is never committed - see .env.example for the shape.
+"""
+
+from functools import lru_cache
+from typing import Literal
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_prefix="HELLO_SERVICE_", env_file=".env", extra="ignore")
+
+    env: Literal["local", "staging", "production"] = "local"
+    database_url: str = "sqlite:///./data/hello.sqlite3"
+    log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
+    max_page_size: int = 100
+
+
+@lru_cache(maxsize=1)
+def get_settings() -> Settings:
+    """Return cached settings. Cached because the DB engine is built once."""
+    return Settings()
+
+==== hello_service/db.py (514 tokens) ====
+"""Database session handling.
+
+The engine is created lazily so importing the package never touches the
+filesystem - tests can swap in an in-memory engine before the first request.
+"""
+
+from collections.abc import Iterator
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+
+from hello_service.config import get_settings
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+_engine = None
+_Session = None
+
+
+def get_engine():
+    """Build the engine on first use. Module-level so tests can reset it."""
+    global _engine, _Session
+    if _engine is None:
+        _engine = create_engine(get_settings().database_url, echo=False)
+        _Session = sessionmaker(bind=_engine, expire_on_commit=False)
+    return _engine
+
+
+def reset_engine() -> None:
+    """Drop the cached engine. Used by tests between cases."""
+    global _engine, _Session
+    if _engine is not None:
+        _engine.dispose()
+    _engine = None
+    _Session = None
+
+
+def get_session() -> Iterator[Session]:
+    """Yield a session and close it, even if the request raised."""
+    factory = _Session or sessionmaker(bind=get_engine())
+    session = factory()
+    try:
+        yield session
+        session.commit()
+    except Exception:
+        session.rollback()
+        raise
+    finally:
+        session.close()
+
+==== hello_service/models.py (382 tokens) ====
+"""SQLAlchemy models."""
+
+from datetime import datetime
+
+from sqlalchemy import DateTime, Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
+
+from hello_service.db import Base
+
+
+class Item(Base):
+    __tablename__ = "items"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    sku: Mapped[str] = mapped_column(String(64), unique=True, nullable=False, index=True)
+    name: Mapped[str] = mapped_column(String(200), nullable=False)
+    price_cents: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    quantity: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow
+    )
+
+    def __repr__(self) -> str:  # pragma: no cover - debug aid
+        return f"<Item {self.sku} {self.price_cents}c x{self.quantity}>"
+
+==== hello_service/routes/__init__.py (9 tokens) ====
+"""Route modules."""
+
+==== proto/item.proto (327 tokens) ====
+syntax = "proto3";
+
+package helloservice.v1;
+
+option go_package = "hello-service/proto/helloservice/v1;v1";
+
+// Item is the wire form of an inventory item. The JSON API and the gRPC
+// service share this shape so clients do not need two models.
+message Item {
+  int32 id = 1;
+  string sku = 2;
+  string name = 3;
+  int32 price_cents = 4;
+  int32 quantity = 5;
+}
+
+// ListItemsRequest pages through items. cursor is the id of the last item
+// returned by the previous page.
+message ListItemsRequest {
+  int32 limit = 1;
+  string cursor = 2;
+}
+
+message ListItemsResponse {
+  repeated Item items = 1;
+  string next_cursor = 2;
+}
+
+message GetItemRequest {
+  int32 id = 1;
+}
+
+service ItemService {
+  rpc ListItems(ListItemsRequest) returns (ListItemsResponse);
+  rpc GetItem(GetItemRequest) returns (Item);
+}
+
+==== requirements.txt (56 tokens) ====
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+==== scripts/__init__.py (24 tokens) ====
+"""Package marker so `python -m scripts.seed` resolves."""
+
+==== scripts/export.py (579 tokens) ====
+"""Export every item to a JSON file.
+
+Usage:
+    python -m scripts.export --out data/exported.json
+"""
+
+import argparse
+import json
+from pathlib import Path
+
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import sessionmaker
+
+from hello_service.config import get_settings
+from hello_service.models import Item
+
+
+def export(out_path: Path) -> int:
+    """Write all items as JSON and return the row count."""
+    engine = create_engine(get_settings().database_url)
+    Session = sessionmaker(bind=engine, expire_on_commit=False)
+    with Session() as session:
+        rows = [
+            {
+                "id": i.id,
+                "sku": i.sku,
+                "name": i.name,
+                "price_cents": i.price_cents,
+                "quantity": i.quantity,
+            }
+            for i in session.scalars(select(Item)).all()
+        ]
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    return len(rows)
+
+
+def main() -> None:
+    """Parse flags and export."""
+    parser = argparse.ArgumentParser(description="Export all items to JSON.")
+    parser.add_argument("--out", default="data/exported.json", help="output path")
+    args = parser.parse_args()
+    n = export(Path(args.out))
+    print(f"wrote {n} items to {args.out}")
+
+
+if __name__ == "__main__":
+    main()
+
+==== tests/__init__.py (0 tokens) ====
+
+
+==== tests/conftest.py (372 tokens) ====
+"""Shared fixtures.
+
+Everything points at an in-memory SQLite database so the suite never writes to
+disk and runs in any order.
+"""
+
+import pytest
+from fastapi.testclient import TestClient
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+from hello_service.app import create_app
+from hello_service.db import Base, get_session
+
+
+@pytest.fixture()
+def client():
+    """A client bound to a fresh in-memory database per test."""
+    engine = create_engine("sqlite://", connect_args={"check_same_thread": False})
+    Base.metadata.create_all(engine)
+    TestSession = sessionmaker(bind=engine, expire_on_commit=False)
+
+    def override():
+        s = TestSession()
+        try:
+            yield s
+            s.commit()
+        finally:
+            s.close()
+
+    app = create_app()
+    app.dependency_overrides[get_session] = override
+    with TestClient(app) as c:
+        yield c
+    app.dependency_overrides.clear()
+
+==== omitted by budget (7 files, ~31545 tokens) ====
+data/seed.json
+hello_service/app.py
+hello_service/routes/items.py
+hello_service/schemas/item.schema.json
+openapi.yaml
+scripts/seed.py
+tests/test_app.py
+
+```
+
 17 files make the cut: the policy and build files, both design
 docs, the data layer (`config.py`, `db.py`, `models.py`), the
 schema stub, and the test scaffolding. Seven go out, led by
@@ -738,7 +1092,7 @@ ctxpack also runs as a Model Context Protocol server over stdio:
 ctxpack mcp
 ```
 
-It speaks JSON-RPC 2.0 with newline-delimited messages and advertises six
+It speaks JSON-RPC 2.0 with newline-delimited messages and advertises seven
 tools on protocol `2024-11-05`, identifying itself as `ctxpack 0.1.11`:
 
 | tool | required | optional |
@@ -749,6 +1103,7 @@ tools on protocol `2024-11-05`, identifying itself as `ctxpack 0.1.11`:
 | `list_models` | - | `format`, `sort`, `top`, `vendor` |
 | `diff_repo` | `path` | `budget`, `exclude`, `format`, `hidden`, `include`, `list`, `max_depth`, `max_size`, `model`, `no_gitignore`, `ref` |
 | `doctor` | - | `format`, `top` |
+| `version` | - | `format` |
 
 Every tool takes `format: "json"` for machine-readable output, and
 `pack_repo`/`diff_repo` take `model` to annotate fit for a named model.
