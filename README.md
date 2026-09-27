@@ -37,7 +37,7 @@ which is exactly the situation a context budget has to handle.
 
 ## ctxpack on this repo
 
-Output captured from this project with ctxpack v0.1.10, and reproduced
+Output captured from this project with ctxpack v0.1.11, and reproduced
 here from a fresh clone of this commit.
 
 Line endings matter: the numbers below hold for an LF checkout -
@@ -51,41 +51,40 @@ checked by cloning the commit both ways and comparing.
 ```console
 $ ctxpack tokens .
 Path:       ctxpack-demo
-Tokens:     ~42187
-Bytes:      93.4 KB
+Tokens:     ~42469
+Bytes:      94.1 KB
 
 Per-model fit (est. tokens / context window):
-  [fits] claude-3-haiku         42.2k / 195.9k (22%)
-  [fits] claude-3-opus          42.2k / 195.9k (22%)
-  [fits] claude-3-sonnet        42.2k / 195.9k (22%)
-  [fits] claude-3.5-haiku       42.2k / 195.9k (22%)
-  [fits] claude-3.5-sonnet      42.2k / 195.9k (22%)
-  [fits] claude-3.7-sonnet      42.2k / 195.9k (22%)
-  [fits] claude-4-opus          42.2k / 195.9k (22%)
-  [fits] claude-4-sonnet        42.2k / 195.9k (22%)
-  [fits] deepseek-r1            42.2k / 123.9k (34%)
-  [fits] deepseek-v3            42.2k / 123.9k (34%)
-  [fits] gemini-1.5-flash       42.2k / 995.9k (4%)
-  [fits] gemini-1.5-pro         42.2k / 2.0M (2%)
-  [fits] gemini-2.0-flash       42.2k / 1.0M (4%)
-  [fits] gemini-2.5-flash       42.2k / 995.9k (4%)
-  [fits] gemini-2.5-pro         42.2k / 2.0M (2%)
-  [OVERFLOW] gpt-3.5-turbo          42.2k / 12.3k (343%)
-  [OVERFLOW] gpt-4                  42.2k / 4.1k (1030%)
-  [fits] gpt-4-turbo            42.2k / 123.9k (34%)
-  [fits] gpt-4.1                42.2k / 123.9k (34%)
-  [fits] gpt-4o                 42.2k / 123.9k (34%)
-  [fits] gpt-4o-mini            42.2k / 123.9k (34%)
-  [fits] gpt-5                  42.2k / 195.9k (22%)
-  [fits] llama-3.1-405b         42.2k / 123.9k (34%)
-  [fits] llama-3.3-70b          42.2k / 123.9k (34%)
-  [fits] mistral-large          42.2k / 123.9k (34%)
-  [fits] mistral-large-2        42.2k / 123.9k (34%)
-  [fits] o1                     42.2k / 195.9k (22%)
-  [fits] o3                     42.2k / 195.9k (22%)
-  [fits] o4-mini                42.2k / 195.9k (22%)
-  [fits] qwen-2.5-72b           42.2k / 123.9k (34%)
-  [fits] qwen2.5                42.2k / 123.9k (34%)
+  [fits] claude-3-haiku         42.5k / 195.9k (22%)
+  [fits] claude-3-opus          42.5k / 195.9k (22%)
+  [fits] claude-3-sonnet        42.5k / 195.9k (22%)
+  [fits] claude-3.5-haiku       42.5k / 195.9k (22%)
+  [fits] claude-3.5-sonnet      42.5k / 195.9k (22%)
+  [fits] claude-3.7-sonnet      42.5k / 195.9k (22%)
+  [fits] claude-4-opus          42.5k / 195.9k (22%)
+  [fits] claude-4-sonnet        42.5k / 195.9k (22%)
+  [fits] deepseek-r1            42.5k / 123.9k (34%)
+  [fits] deepseek-v3            42.5k / 123.9k (34%)
+  [fits] gemini-1.5-flash       42.5k / 995.9k (4%)
+  [fits] gemini-1.5-pro         42.5k / 2.0M (2%)
+  [fits] gemini-2.0-flash       42.5k / 1.0M (4%)
+  [fits] gemini-2.5-flash       42.5k / 995.9k (4%)
+  [fits] gemini-2.5-pro         42.5k / 2.0M (2%)
+  [OVERFLOW] gpt-3.5-turbo          42.5k / 12.3k (346%)
+  [OVERFLOW] gpt-4                  42.5k / 4.1k (1037%)
+  [fits] gpt-4-turbo            42.5k / 123.9k (34%)
+  [fits] gpt-4.1                42.5k / 123.9k (34%)
+  [fits] gpt-4o                 42.5k / 123.9k (34%)
+  [fits] gpt-4o-mini            42.5k / 123.9k (34%)
+  [fits] gpt-5                  42.5k / 195.9k (22%)
+  [fits] llama-3.1-405b         42.5k / 123.9k (34%)
+  [fits] llama-3.3-70b          42.5k / 123.9k (34%)
+  [fits] mistral-large          42.5k / 123.9k (34%)
+  [fits] mistral-large-2        42.5k / 123.9k (34%)
+  [fits] o1                     42.5k / 195.9k (22%)
+  [fits] o3                     42.5k / 195.9k (22%)
+  [fits] o4-mini                42.5k / 195.9k (22%)
+  [fits] qwen-2.5-72b           42.5k / 123.9k (34%)
 ```
 
 Two small-window models overflow. Token counts are estimates, not real BPE
@@ -96,9 +95,9 @@ output.
 ```console
 $ ctxpack map .
 Repository: ctxpack-demo
-Files: ~42187 tokens, 93.4 KB
+Files: ~42469 tokens, 94.1 KB
 
-ctxpack-demo/  [42187t, 93.4KB]
+ctxpack-demo/  [42469t, 94.1KB]
   data/  [26178t, 56.9KB]
     seed.json  [26178t, 56.9KB]
   docs/  [1537t, 3.6KB]
@@ -129,7 +128,7 @@ ctxpack-demo/  [42187t, 93.4KB]
   Dockerfile  [124t, 281B]
   LICENSE  [314t, 812B]
   Makefile  [121t, 286B]
-  README.md  [5656t, 12.3KB]
+  README.md  [5938t, 13.0KB]
   openapi.yaml  [1110t, 2.7KB]
   requirements.txt  [56t, 104B]
 ```
@@ -150,39 +149,465 @@ Repository: ctxpack-demo
 Files: 17 | Tokens: ~4986 | Bytes: 11.8 KB
 
 ==== CHANGELOG.md (252 tokens) ====
-...
+# Changelog
+
+## [Unreleased]
+
+### Added
+- `scripts/seed.py` creates the schema and loads starter rows.
+- `scripts/export.py` writes every item to a JSON file.
+- Makefile targets `seed` and `export` for the two scripts.
+
+## [0.3.1] - 2026-09-22
+
+### Added
+- Cursor-based pagination on GET /items.
+
+### Fixed
+- PUT /items/{id} no longer accepts an empty sku.
+
+## [0.3.0] - 2026-07-11
+
+### Added
+- POST /items and PATCH /items/{id}.
+- Health endpoints at /healthz and /readyz.
+
+## [0.2.0] - 2026-04-02
+
+### Changed
+- Migrated from Flask to FastAPI.
+
 ==== Dockerfile (124 tokens) ====
-...
+FROM python:3.11-slim AS base
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["uvicorn", "hello_service.app:app", "--host", "0.0.0.0", "--port", "8000"]
+
 ==== LICENSE (314 tokens) ====
-...
+MIT License
+
+Copyright (c) 2026 la2278647-arch
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
 ==== Makefile (121 tokens) ====
-...
+.PHONY: run test lint format seed export
+
+run:
+	uvicorn hello_service.app:app --reload --port 8000
+
+test:
+	pytest
+
+lint:
+	ruff check hello_service tests
+
+format:
+	ruff format hello_service tests
+
+seed:
+	python -m scripts.seed
+
+export:
+	python -m scripts.export --out data/exported.json
+
 ==== docs/API.md (847 tokens) ====
-...
+# API
+
+Base URL: `http://localhost:8000`
+
+## GET /items
+
+List items, newest first, with cursor pagination.
+
+| Query   | Type   | Default | Notes                              |
+| ------- | ------ | ------- | ---------------------------------- |
+| limit   | int    | 50      | 1-200. Higher values raise 422.    |
+| cursor  | string | -       | An item id; returns ids below it.  |
+
+Response:
+
+```json
+{
+  "items": [
+    {
+      "id": 3,
+      "sku": "SKU-3",
+      "name": "Gizmo",
+      "price_cents": 1,
+      "quantity": 0,
+      "updated_at": "2026-09-22T12:18:03"
+    }
+  ],
+  "next_cursor": "3"
+}
+```
+
+`next_cursor` is null when the page is shorter than `limit`.
+
+## POST /items
+
+Create an item. Returns 201.
+
+- `sku` is required, 1-64 characters, uppercase letters, digits and hyphens.
+- `name` is required, 1-200 characters.
+- `price_cents` is required, non-negative integer. Use cents, never floats.
+- `quantity` defaults to 0 and must be non-negative.
+
+A duplicate `sku` returns 409, not 500. Validation failures return 422.
+
+## GET /items/{item_id}
+
+Returns the item, or 404 if the id is unknown.
+
+## PATCH /items/{item_id}
+
+Partial update. Only keys present in the request body are written; absent keys
+are left untouched. 404 for an unknown id.
+
+## DELETE /items/{item_id}
+
+Returns 204. Idempotent: deleting an unknown id also returns 204 so a retry is
+safe.
+
+## GET /healthz
+
+Returns `{"status": "ok"}` with 200. Use for liveness probes only.
+
+## GET /readyz
+
+Returns `{"status": "ready"}` with 200, or `{"status": "not ready"}` with 503
+if the database engine cannot be built.
+
+## Errors
+
+All errors use the shape `{"detail": "..."}`. Status codes:
+
+| Code | Meaning                            |
+| ---- | ---------------------------------- |
+| 400  | A route raised ValueError          |
+| 404  | The item does not exist            |
+| 409  | A different item has the same sku  |
+| 422  | Request body failed validation     |
+| 503  | Readiness probe failed             |
+
 ==== docs/ARCHITECTURE.md (690 tokens) ====
-...
+# Architecture
+
+## Shape
+
+Three layers, each with one job:
+
+- `hello_service.routes` owns HTTP: parsing requests, returning responses, and
+  turning database errors into status codes. It never opens a database handle
+  itself; it takes a session as a dependency.
+- `hello_service.models` owns the schema: the `Item` table and its columns.
+  Nothing else imports this module except the routes and the tests.
+- `hello_service.db` owns connections: engine creation, session lifetimes, and
+  commit and rollback behaviour. The engine is built lazily so that importing
+  the package has no filesystem side effects.
+
+Settings live in `hello_service.config`. They are cached because the database
+engine is built once from them, and rebuilding the settings per request would
+rebuild the engine per request.
+
+## Request flow
+
+A request for GET /items/{id} goes through FastAPI routing, which calls
+`get_item` with a session yielded by `get_session`. The route issues one
+`session.get`, serialises the row, and returns it. `get_session` commits on
+success, rolls back on any exception, and always closes the session.
+
+## Why this size
+
+The service is deliberately small. It has one table, five endpoints, and no
+background jobs, so a change to any part is visible in under a minute. The
+points that are usually hard to reason about in a real service - dependency
+injection, session lifetime, lazy engine creation, validation errors - are all
+present and each has a test.
+
+## Not solved here
+
+- Authentication. There is none. Do not put this behind a public load balancer.
+- Migrations. `Base.metadata.create_all` is a test aid; use Alembic for real
+  databases.
+- Rate limiting and caching. Both are deployment concerns.
+
 ==== hello_service/__init__.py (37 tokens) ====
-...
+"""hello_service: a tiny JSON API for inventory items."""
+
+__version__ = "0.3.1"
+
 ==== hello_service/config.py (338 tokens) ====
-...
+"""Application settings, loaded from environment variables.
+
+Values come from the process environment first, then a local .env file. The
+.env file is never committed - see .env.example for the shape.
+"""
+
+from functools import lru_cache
+from typing import Literal
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_prefix="HELLO_SERVICE_", env_file=".env", extra="ignore")
+
+    env: Literal["local", "staging", "production"] = "local"
+    database_url: str = "sqlite:///./data/hello.sqlite3"
+    log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
+    max_page_size: int = 100
+
+
+@lru_cache(maxsize=1)
+def get_settings() -> Settings:
+    """Return cached settings. Cached because the DB engine is built once."""
+    return Settings()
+
 ==== hello_service/db.py (514 tokens) ====
-...
+"""Database session handling.
+
+The engine is created lazily so importing the package never touches the
+filesystem - tests can swap in an in-memory engine before the first request.
+"""
+
+from collections.abc import Iterator
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+
+from hello_service.config import get_settings
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+_engine = None
+_Session = None
+
+
+def get_engine():
+    """Build the engine on first use. Module-level so tests can reset it."""
+    global _engine, _Session
+    if _engine is None:
+        _engine = create_engine(get_settings().database_url, echo=False)
+        _Session = sessionmaker(bind=_engine, expire_on_commit=False)
+    return _engine
+
+
+def reset_engine() -> None:
+    """Drop the cached engine. Used by tests between cases."""
+    global _engine, _Session
+    if _engine is not None:
+        _engine.dispose()
+    _engine = None
+    _Session = None
+
+
+def get_session() -> Iterator[Session]:
+    """Yield a session and close it, even if the request raised."""
+    factory = _Session or sessionmaker(bind=get_engine())
+    session = factory()
+    try:
+        yield session
+        session.commit()
+    except Exception:
+        session.rollback()
+        raise
+    finally:
+        session.close()
+
 ==== hello_service/models.py (382 tokens) ====
-...
+"""SQLAlchemy models."""
+
+from datetime import datetime
+
+from sqlalchemy import DateTime, Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
+
+from hello_service.db import Base
+
+
+class Item(Base):
+    __tablename__ = "items"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    sku: Mapped[str] = mapped_column(String(64), unique=True, nullable=False, index=True)
+    name: Mapped[str] = mapped_column(String(200), nullable=False)
+    price_cents: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    quantity: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow
+    )
+
+    def __repr__(self) -> str:  # pragma: no cover - debug aid
+        return f"<Item {self.sku} {self.price_cents}c x{self.quantity}>"
+
 ==== hello_service/routes/__init__.py (9 tokens) ====
-...
+"""Route modules."""
+
 ==== proto/item.proto (327 tokens) ====
-...
+syntax = "proto3";
+
+package helloservice.v1;
+
+option go_package = "hello-service/proto/helloservice/v1;v1";
+
+// Item is the wire form of an inventory item. The JSON API and the gRPC
+// service share this shape so clients do not need two models.
+message Item {
+  int32 id = 1;
+  string sku = 2;
+  string name = 3;
+  int32 price_cents = 4;
+  int32 quantity = 5;
+}
+
+// ListItemsRequest pages through items. cursor is the id of the last item
+// returned by the previous page.
+message ListItemsRequest {
+  int32 limit = 1;
+  string cursor = 2;
+}
+
+message ListItemsResponse {
+  repeated Item items = 1;
+  string next_cursor = 2;
+}
+
+message GetItemRequest {
+  int32 id = 1;
+}
+
+service ItemService {
+  rpc ListItems(ListItemsRequest) returns (ListItemsResponse);
+  rpc GetItem(GetItemRequest) returns (Item);
+}
+
 ==== requirements.txt (56 tokens) ====
-...
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
 ==== scripts/__init__.py (24 tokens) ====
-...
+"""Package marker so `python -m scripts.seed` resolves."""
+
 ==== scripts/export.py (579 tokens) ====
-...
+"""Export every item to a JSON file.
+
+Usage:
+    python -m scripts.export --out data/exported.json
+"""
+
+import argparse
+import json
+from pathlib import Path
+
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import sessionmaker
+
+from hello_service.config import get_settings
+from hello_service.models import Item
+
+
+def export(out_path: Path) -> int:
+    """Write all items as JSON and return the row count."""
+    engine = create_engine(get_settings().database_url)
+    Session = sessionmaker(bind=engine, expire_on_commit=False)
+    with Session() as session:
+        rows = [
+            {
+                "id": i.id,
+                "sku": i.sku,
+                "name": i.name,
+                "price_cents": i.price_cents,
+                "quantity": i.quantity,
+            }
+            for i in session.scalars(select(Item)).all()
+        ]
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    return len(rows)
+
+
+def main() -> None:
+    """Parse flags and export."""
+    parser = argparse.ArgumentParser(description="Export all items to JSON.")
+    parser.add_argument("--out", default="data/exported.json", help="output path")
+    args = parser.parse_args()
+    n = export(Path(args.out))
+    print(f"wrote {n} items to {args.out}")
+
+
+if __name__ == "__main__":
+    main()
+
 ==== tests/__init__.py (0 tokens) ====
-...
+
+
 ==== tests/conftest.py (372 tokens) ====
-...
+"""Shared fixtures.
+
+Everything points at an in-memory SQLite database so the suite never writes to
+disk and runs in any order.
+"""
+
+import pytest
+from fastapi.testclient import TestClient
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+from hello_service.app import create_app
+from hello_service.db import Base, get_session
+
+
+@pytest.fixture()
+def client():
+    """A client bound to a fresh in-memory database per test."""
+    engine = create_engine("sqlite://", connect_args={"check_same_thread": False})
+    Base.metadata.create_all(engine)
+    TestSession = sessionmaker(bind=engine, expire_on_commit=False)
+
+    def override():
+        s = TestSession()
+        try:
+            yield s
+            s.commit()
+        finally:
+            s.close()
+
+    app = create_app()
+    app.dependency_overrides[get_session] = override
+    with TestClient(app) as c:
+        yield c
+    app.dependency_overrides.clear()
 
 ==== omitted by budget (7 files, ~31545 tokens) ====
 data/seed.json
@@ -192,6 +617,7 @@ hello_service/schemas/item.schema.json
 openapi.yaml
 scripts/seed.py
 tests/test_app.py
+
 ```
 
 17 files make the cut: the policy and build files, both design
@@ -313,14 +739,14 @@ ctxpack mcp
 ```
 
 It speaks JSON-RPC 2.0 with newline-delimited messages and advertises six
-tools on protocol `2024-11-05`, identifying itself as `ctxpack 0.1.10`:
+tools on protocol `2024-11-05`, identifying itself as `ctxpack 0.1.11`:
 
 | tool | required | optional |
 | --- | --- | --- |
 | `pack_repo` | `path` | `budget`, `exclude`, `format`, `hidden`, `include`, `max_depth`, `max_size`, `model`, `no_gitignore` |
-| `repo_map` | `path` | `exclude`, `format`, `include`, `max_depth`, `max_size`, `sort` |
+| `repo_map` | `path` | `exclude`, `format`, `include`, `max_depth`, `max_size`, `sort`, `top` |
 | `count_tokens` | `path` | `exclude`, `format`, `hidden`, `include`, `max_depth`, `max_size`, `model`, `no_gitignore`, `sort`, `top` |
-| `list_models` | - | `format` |
+| `list_models` | - | `format`, `sort`, `top`, `vendor` |
 | `diff_repo` | `path` | `budget`, `exclude`, `format`, `hidden`, `include`, `list`, `max_depth`, `max_size`, `model`, `no_gitignore`, `ref` |
 | `doctor` | - | `format`, `top` |
 
@@ -338,6 +764,24 @@ For Cursor or Claude Desktop:
   }
 }
 ```
+
+## Machine-readable output
+
+Every command has a JSON mode, and the two lookup tables also have CSV
+modes, so a script can consume them without parsing prose:
+
+```console
+$ ctxpack version --json
+{"name":"ctxpack","version":"0.1.11","os":"windows","arch":"amd64","go":"go1.26.5","commit":"dev","built":"unknown"}
+$ ctxpack models --csv | head -4
+name,context_window,vendor
+claude-3-haiku,200000,anthropic
+claude-3-opus,200000,anthropic
+claude-3-sonnet,200000,anthropic
+```
+
+`tokens --csv` emits `model,used,limit,fits,pct_used`, the same field names as
+`tokens --json`, so a consumer can switch formats without changing its schema.
 
 ## Limitations
 
@@ -358,7 +802,7 @@ For Cursor or Claude Desktop:
   usually what you want; if you do not want them in the bundle, commit or
   ignore them first.
 - The model table is a hand-maintained snapshot of public context windows -
-  31 models across 7 vendors here. It can lag a vendor's release, and `--model`
+  30 models across 7 vendors here. It can lag a vendor's release, and `--model`
   accepts any name, so a fit number for an unlisted model is only as good as the
   nearest entry.
 - Nothing here reads a model or calls an API. ctxpack is offline: the numbers
