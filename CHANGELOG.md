@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Changed
+- **README's ctxpack captures refreshed for v0.1.11.**
+  The captured output no longer lists the removed `qwen2.5` model alias, the
+  tokens/map/pack sections are regenerated with the current tree, and the
+  "Machine-readable output" section documents `version --json` and
+  `models --csv`. The MCP tool table is updated to the seven-tool surface:
+  `repo_map` grew `top`, `list_models` grew `vendor`/`top`/`sort`, and a
+  `version` tool was added.
+
 ### Added
 - `scripts/seed.py` creates the schema and loads starter rows.
 - `scripts/export.py` writes every item to a JSON file.
