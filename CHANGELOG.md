@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 ### Changed
-- **README's ctxpack captures refreshed for v0.1.12.**
+- **README's ctxpack captures refreshed for v0.1.13.**
   The captured output no longer lists the removed `qwen2.5` model alias, the
   tokens/map/pack sections are regenerated with the current tree, and the
   "Machine-readable output" section documents `version --json` and
