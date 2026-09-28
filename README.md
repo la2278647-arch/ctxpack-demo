@@ -37,7 +37,7 @@ which is exactly the situation a context budget has to handle.
 
 ## ctxpack on this repo
 
-Output captured from this project with ctxpack v0.1.14, and reproduced
+Output captured from this project with ctxpack v0.1.15, and reproduced
 here from a fresh clone of this commit.
 
 Line endings matter: the numbers below hold for an LF checkout -
@@ -1326,7 +1326,7 @@ result looks wrong.
 ```console
 $ ctxpack doctor
 ctxpack diagnostics:
-  Version:   ctxpack 0.1.14 (windows/amd64, go1.26.5, commit dev, built unknown)
+  Version:   ctxpack 0.1.15 (windows/amd64, go1.26.5, commit dev, built unknown)
   Go:        go1.26.5
   Platform:  windows/amd64
   Git:       C:\Program Files\Git\mingw64\bin\git.exe (git version 2.55.0.windows.3)
@@ -1420,7 +1420,7 @@ ctxpack mcp
 ```
 
 It speaks JSON-RPC 2.0 with newline-delimited messages and advertises seven
-tools on protocol `2024-11-05`, identifying itself as `ctxpack 0.1.14`:
+tools on protocol `2024-11-05`, identifying itself as `ctxpack 0.1.15`:
 
 | tool | required | optional |
 | --- | --- | --- |
